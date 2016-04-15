@@ -19,10 +19,21 @@ class ParamsController < ApplicationController
   end
 
   def counter
-    #Counter.first.update(count += 1) if #something
+    @number = params[:number].to_i + 1
   end
 
   def url_segment
     @message = params[:message]
+  end
+
+  def form_display
+  end
+
+  def form_result
+    @message = params[:message]
+  end
+
+  def wildcard
+    @wildcard = params[:other]
   end
 end

@@ -2,12 +2,14 @@ Rails.application.routes.draw do
   root 'params#index'
   
   get '/param_1' => 'params#param_1'
-  
   get '/guess_game/:guess' => 'params#guess_game'
-
   get '/counter' => 'params#counter'
-
-  get 'url_segment/:message' => 'params#url_segment'
+  get '/url_segment/:message' => 'params#url_segment'
+  
+  get '/form_display' => 'params#form_display'
+  post '/form_result' => 'params#form_result'
+  
+  get '/wildcard/*other' => 'params#wildcard'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
